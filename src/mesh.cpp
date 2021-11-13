@@ -5,14 +5,12 @@
 #include "mesh.h"
 
 // NOTE: this only works for TRIANGLE ONLY meshes
-void
-load_mesh(sMesh        *result,
-          const char*   mesh_file_dir) {
+void sMesh::load_mesh(const char* mesh_dir) {
     FILE *mesh_file;
     int mesh_file_size;
     char *raw_mesh_file;
 
-    mesh_file = fopen(mesh_file_dir, "r");
+    mesh_file = fopen(mesh_dir, "r");
 
     assert(mesh_file != NULL && "Failed to open the mesh");
 
@@ -34,9 +32,9 @@ load_mesh(sMesh        *result,
 
     //info("v count: %i", v_count);
     // Allocate the memmory
-    result->vertex_list = (sGlVertex*) malloc(sizeof(sGlVertex) * v_count);
-    result->faces_index = (unsigned int*) malloc(sizeof(float) * f_count * 3);
-    result->indices_cout = f_count * 3;
+    vertex_list = (sGlVertex*) malloc(sizeof(sGlVertex) * v_count);
+    faces_index = (unsigned int*) malloc(sizeof(float) * f_count * 3);
+    indices_cout = f_count * 3;
 
     //info("!!indices count %i vertex count : %i", result->indices_cout, v_count);
 
@@ -50,7 +48,7 @@ load_mesh(sMesh        *result,
 
     int vertex_index = 0;
     int uv_count = 0;
-    int faces_index = 0;
+    int faces_index_count = 0;
     sUV_Wrapper *tmp_uvs = NULL;
 
     // Since the OBJs are stored in a sequential fashin, we can just get the
@@ -60,9 +58,9 @@ load_mesh(sMesh        *result,
         if (line_buffer[0] == 'v' && line_buffer[1] == ' ') {
             float x, y, z;
             sscanf(line_buffer,"v %f %f %f\n",&x, &y, &z);
-            result->vertex_list[vertex_index].x = x;
-            result->vertex_list[vertex_index].y = y;
-            result->vertex_list[vertex_index].z = z;
+            vertex_list[vertex_index].x = x;
+            vertex_list[vertex_index].y = y;
+            vertex_list[vertex_index].z = z;
             vertex_index++;
         } else if (line_buffer[0] == 'v' && line_buffer[1] == 't') {
             if (uv_count == 0) {
@@ -76,7 +74,7 @@ load_mesh(sMesh        *result,
             tmp_uvs[uv_count].v =  1.f - v;
             uv_count++;
         } else if (line_buffer[0] == 'f') {
-            int index1, index2, index3, normal1, normal2, normal3, uv1, uv2, uv3;
+            unsigned int index1, index2, index3, normal1, normal2, normal3, uv1, uv2, uv3;
             sscanf(line_buffer,
                    "f %i/%i/%i %i/%i/%i %i/%i/%i\n",
                    &index1,
@@ -100,18 +98,18 @@ load_mesh(sMesh        *result,
                 int p = 0;
             }
 
-            result->faces_index[faces_index++] = index1;
-            result->faces_index[faces_index++] = index2;
-            result->faces_index[faces_index++] = index3;
+            faces_index[faces_index_count++] = index1;
+            faces_index[faces_index_count++] = index2;
+            faces_index[faces_index_count++] = index3;
 
-            result->vertex_list[index1].u = tmp_uvs[uv1].u;
-            result->vertex_list[index1].v = tmp_uvs[uv1].v;
+            vertex_list[index1].u = tmp_uvs[uv1].u;
+            vertex_list[index1].v = tmp_uvs[uv1].v;
 
-            result->vertex_list[index2].u = tmp_uvs[uv2].u;
-            result->vertex_list[index2].v = tmp_uvs[uv2].v;
+            vertex_list[index2].u = tmp_uvs[uv2].u;
+            vertex_list[index2].v = tmp_uvs[uv2].v;
 
-            result->vertex_list[index3].u = tmp_uvs[uv3].u;
-            result->vertex_list[index3].v = tmp_uvs[uv3].v;
+            vertex_list[index3].u = tmp_uvs[uv3].u;
+            vertex_list[index3].v = tmp_uvs[uv3].v;
 
             if (index2 == 0) {
                 int p = 0;
@@ -122,13 +120,12 @@ load_mesh(sMesh        *result,
     free(tmp_uvs);
 
     fclose(mesh_file);
-    result->vertex_count = vertex_index;
-    result->raw_vertex_size = vertex_index * 5;
-    result->uv_count = uv_count;
+    vertex_count = vertex_index;
+    raw_vertex_size = vertex_index * 5;
+    uv_count = uv_count;
 };
 
-void
-load_cube_mesh(sMesh *result) {
+void sMesh::load_cube() {
     float tmp_vertex[36 * 3] = {-1.0f,  1.0f, -1.0f,
                            -1.0f, -1.0f, -1.0f,
                            1.0f, -1.0f, -1.0f,
@@ -171,17 +168,16 @@ load_cube_mesh(sMesh *result) {
                            -1.0f, -1.0f,  1.0f,
                            1.0f, -1.0f,  1.0f
     };
-    result->raw_vertex_list = (float *) malloc(sizeof(tmp_vertex));
-    memcpy(result->raw_vertex_list, tmp_vertex, sizeof(tmp_vertex));
-    result->raw_vertex_size = sizeof(tmp_vertex);
-    result->vertex_count = 36;
+    raw_vertex_list = (float *) malloc(sizeof(tmp_vertex));
+    memcpy(raw_vertex_list, tmp_vertex, sizeof(tmp_vertex));
+    raw_vertex_size = sizeof(tmp_vertex);
+    vertex_count = 36;
 }
 
 
-void
-mesh_destroy(sMesh *to_dispose) {
-    free(to_dispose->raw_vertex_list);
-    free(to_dispose->faces_index);
+void sMesh::destroy() {
+    free(raw_vertex_list);
+    free(faces_index);
 };
 
 sVector3

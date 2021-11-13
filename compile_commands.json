@@ -1,224 +1,344 @@
 [
     {
         "arguments": [
-            "c++",
+            "cc",
             "-c",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/GL",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/gl3w_dir",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/glfw/include",
-            "-g",
+            "-D_GLFW_USE_CONFIG_H",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/include",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/src",
+            "-fPIC",
+            "-Wall",
+            "-std=c99",
             "-o",
-            "CMakeFiles/PROJECT.dir/src/imgui/imgui_demo.cpp.o",
-            "src/imgui/imgui_demo.cpp"
+            "CMakeFiles/glfw.dir/x11_window.c.o",
+            "x11_window.c"
         ],
-        "directory": "/home/js/Documents/OpenGL-GLFW-Template",
-        "file": "src/imgui/imgui_demo.cpp"
+        "directory": "/home/js/Documents/Grass-Renderer/includes/glfw/src",
+        "file": "x11_window.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-D_GLFW_USE_CONFIG_H",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/include",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/src",
+            "-fPIC",
+            "-Wall",
+            "-std=c99",
+            "-o",
+            "CMakeFiles/glfw.dir/glx_context.c.o",
+            "glx_context.c"
+        ],
+        "directory": "/home/js/Documents/Grass-Renderer/includes/glfw/src",
+        "file": "glx_context.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-D_GLFW_USE_CONFIG_H",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/include",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/src",
+            "-fPIC",
+            "-Wall",
+            "-std=c99",
+            "-Wdeclaration-after-statement",
+            "-o",
+            "CMakeFiles/glfw.dir/osmesa_context.c.o",
+            "osmesa_context.c"
+        ],
+        "directory": "/home/js/Documents/Grass-Renderer/includes/glfw/src",
+        "file": "osmesa_context.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-D_GLFW_USE_CONFIG_H",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/include",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/src",
+            "-fPIC",
+            "-Wall",
+            "-std=c99",
+            "-Wdeclaration-after-statement",
+            "-o",
+            "CMakeFiles/glfw.dir/window.c.o",
+            "window.c"
+        ],
+        "directory": "/home/js/Documents/Grass-Renderer/includes/glfw/src",
+        "file": "window.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-D_GLFW_USE_CONFIG_H",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/include",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/src",
+            "-fPIC",
+            "-Wall",
+            "-std=c99",
+            "-Wdeclaration-after-statement",
+            "-o",
+            "CMakeFiles/glfw.dir/monitor.c.o",
+            "monitor.c"
+        ],
+        "directory": "/home/js/Documents/Grass-Renderer/includes/glfw/src",
+        "file": "monitor.c"
     },
     {
         "arguments": [
             "c++",
             "-c",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/GL",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/gl3w_dir",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/glfw/include",
+            "-I/home/js/Documents/Grass-Renderer/includes/GL",
+            "-I/home/js/Documents/Grass-Renderer/includes",
+            "-I/home/js/Documents/Grass-Renderer/gl3w_dir",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/include",
             "-g",
             "-o",
-            "CMakeFiles/PROJECT.dir/src/imgui/imgui_tables.cpp.o",
-            "src/imgui/imgui_tables.cpp"
+            "CMakeFiles/PROJECT.dir/src/material.cpp.o",
+            "src/material.cpp"
         ],
-        "directory": "/home/js/Documents/OpenGL-GLFW-Template",
-        "file": "src/imgui/imgui_tables.cpp"
+        "directory": "/home/js/Documents/Grass-Renderer",
+        "file": "src/material.cpp"
     },
     {
         "arguments": [
-            "c++",
+            "cc",
             "-c",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/GL",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/gl3w_dir",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/glfw/include",
-            "-g",
+            "-D_GLFW_USE_CONFIG_H",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/include",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/src",
+            "-fPIC",
+            "-Wall",
+            "-std=c99",
+            "-Wdeclaration-after-statement",
             "-o",
-            "CMakeFiles/PROJECT.dir/src/imgui/imgui.cpp.o",
-            "src/imgui/imgui.cpp"
+            "CMakeFiles/glfw.dir/egl_context.c.o",
+            "egl_context.c"
         ],
-        "directory": "/home/js/Documents/OpenGL-GLFW-Template",
-        "file": "src/imgui/imgui.cpp"
-    },
-    {
-        "arguments": [
-            "c++",
-            "-c",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/GL",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/gl3w_dir",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/glfw/include",
-            "-g",
-            "-o",
-            "CMakeFiles/PROJECT.dir/src/imgui/imgui_draw.cpp.o",
-            "src/imgui/imgui_draw.cpp"
-        ],
-        "directory": "/home/js/Documents/OpenGL-GLFW-Template",
-        "file": "src/imgui/imgui_draw.cpp"
-    },
-    {
-        "arguments": [
-            "c++",
-            "-c",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/GL",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/gl3w_dir",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/glfw/include",
-            "-g",
-            "-o",
-            "CMakeFiles/PROJECT.dir/src/mesh.cpp.o",
-            "src/mesh.cpp"
-        ],
-        "directory": "/home/js/Documents/OpenGL-GLFW-Template",
-        "file": "src/mesh.cpp"
+        "directory": "/home/js/Documents/Grass-Renderer/includes/glfw/src",
+        "file": "egl_context.c"
     },
     {
         "arguments": [
             "cc",
             "-c",
             "-I/",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/gl3w_dir",
+            "-I/home/js/Documents/Grass-Renderer/includes",
+            "-I/home/js/Documents/Grass-Renderer/gl3w_dir",
             "-o",
             "CMakeFiles/gl3w.dir/includes/GL/src/gl3w.c.o",
             "includes/GL/src/gl3w.c"
         ],
-        "directory": "/home/js/Documents/OpenGL-GLFW-Template",
+        "directory": "/home/js/Documents/Grass-Renderer",
         "file": "includes/GL/src/gl3w.c"
     },
     {
         "arguments": [
-            "c++",
+            "cc",
             "-c",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/GL",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/gl3w_dir",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/glfw/include",
-            "-g",
+            "-D_GLFW_USE_CONFIG_H",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/include",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/src",
+            "-fPIC",
+            "-Wall",
+            "-std=c99",
             "-o",
-            "CMakeFiles/PROJECT.dir/src/shader.cpp.o",
-            "src/shader.cpp"
+            "CMakeFiles/glfw.dir/x11_init.c.o",
+            "x11_init.c"
         ],
-        "directory": "/home/js/Documents/OpenGL-GLFW-Template",
-        "file": "src/shader.cpp"
+        "directory": "/home/js/Documents/Grass-Renderer/includes/glfw/src",
+        "file": "x11_init.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-D_GLFW_USE_CONFIG_H",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/include",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/src",
+            "-fPIC",
+            "-Wall",
+            "-std=c99",
+            "-Wdeclaration-after-statement",
+            "-o",
+            "CMakeFiles/glfw.dir/vulkan.c.o",
+            "vulkan.c"
+        ],
+        "directory": "/home/js/Documents/Grass-Renderer/includes/glfw/src",
+        "file": "vulkan.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-D_GLFW_USE_CONFIG_H",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/include",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/src",
+            "-fPIC",
+            "-Wall",
+            "-std=c99",
+            "-o",
+            "CMakeFiles/glfw.dir/posix_thread.c.o",
+            "posix_thread.c"
+        ],
+        "directory": "/home/js/Documents/Grass-Renderer/includes/glfw/src",
+        "file": "posix_thread.c"
     },
     {
         "arguments": [
             "c++",
             "-c",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/GL",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/gl3w_dir",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/glfw/include",
+            "-I/home/js/Documents/Grass-Renderer/includes/GL",
+            "-I/home/js/Documents/Grass-Renderer/includes",
+            "-I/home/js/Documents/Grass-Renderer/gl3w_dir",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/include",
             "-g",
             "-o",
-            "CMakeFiles/PROJECT.dir/src/mesh_renderer.cpp.o",
-            "src/mesh_renderer.cpp"
+            "CMakeFiles/PROJECT.dir/src/mesh.cpp.o",
+            "src/mesh.cpp"
         ],
-        "directory": "/home/js/Documents/OpenGL-GLFW-Template",
-        "file": "src/mesh_renderer.cpp"
+        "directory": "/home/js/Documents/Grass-Renderer",
+        "file": "src/mesh.cpp"
     },
     {
         "arguments": [
             "c++",
             "-c",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/GL",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/gl3w_dir",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/glfw/include",
-            "-g",
-            "-o",
-            "CMakeFiles/PROJECT.dir/src/imgui/imgui_impl_glfw.cpp.o",
-            "src/imgui/imgui_impl_glfw.cpp"
-        ],
-        "directory": "/home/js/Documents/OpenGL-GLFW-Template",
-        "file": "src/imgui/imgui_impl_glfw.cpp"
-    },
-    {
-        "arguments": [
-            "c++",
-            "-c",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/GL",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/gl3w_dir",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/glfw/include",
-            "-g",
-            "-o",
-            "CMakeFiles/PROJECT.dir/src/texture.cpp.o",
-            "src/texture.cpp"
-        ],
-        "directory": "/home/js/Documents/OpenGL-GLFW-Template",
-        "file": "src/texture.cpp"
-    },
-    {
-        "arguments": [
-            "c++",
-            "-c",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/GL",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/gl3w_dir",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/glfw/include",
-            "-g",
-            "-o",
-            "CMakeFiles/PROJECT.dir/src/material.cpp.o",
-            "src/material.cpp"
-        ],
-        "directory": "/home/js/Documents/OpenGL-GLFW-Template",
-        "file": "src/material.cpp"
-    },
-    {
-        "arguments": [
-            "c++",
-            "-c",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/GL",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/gl3w_dir",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/glfw/include",
-            "-g",
-            "-o",
-            "CMakeFiles/PROJECT.dir/src/imgui/imgui_impl_opengl3.cpp.o",
-            "src/imgui/imgui_impl_opengl3.cpp"
-        ],
-        "directory": "/home/js/Documents/OpenGL-GLFW-Template",
-        "file": "src/imgui/imgui_impl_opengl3.cpp"
-    },
-    {
-        "arguments": [
-            "c++",
-            "-c",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/GL",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/gl3w_dir",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/glfw/include",
-            "-g",
-            "-o",
-            "CMakeFiles/PROJECT.dir/src/imgui/imgui_widgets.cpp.o",
-            "src/imgui/imgui_widgets.cpp"
-        ],
-        "directory": "/home/js/Documents/OpenGL-GLFW-Template",
-        "file": "src/imgui/imgui_widgets.cpp"
-    },
-    {
-        "arguments": [
-            "c++",
-            "-c",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/GL",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/gl3w_dir",
-            "-I/home/js/Documents/OpenGL-GLFW-Template/includes/glfw/include",
+            "-I/home/js/Documents/Grass-Renderer/includes/GL",
+            "-I/home/js/Documents/Grass-Renderer/includes",
+            "-I/home/js/Documents/Grass-Renderer/gl3w_dir",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/include",
             "-g",
             "-o",
             "CMakeFiles/PROJECT.dir/src/main.cpp.o",
             "src/main.cpp"
         ],
-        "directory": "/home/js/Documents/OpenGL-GLFW-Template",
+        "directory": "/home/js/Documents/Grass-Renderer",
         "file": "src/main.cpp"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-D_GLFW_USE_CONFIG_H",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/include",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/src",
+            "-fPIC",
+            "-Wall",
+            "-std=c99",
+            "-o",
+            "CMakeFiles/glfw.dir/xkb_unicode.c.o",
+            "xkb_unicode.c"
+        ],
+        "directory": "/home/js/Documents/Grass-Renderer/includes/glfw/src",
+        "file": "xkb_unicode.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-D_GLFW_USE_CONFIG_H",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/include",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/src",
+            "-fPIC",
+            "-Wall",
+            "-std=c99",
+            "-o",
+            "CMakeFiles/glfw.dir/x11_monitor.c.o",
+            "x11_monitor.c"
+        ],
+        "directory": "/home/js/Documents/Grass-Renderer/includes/glfw/src",
+        "file": "x11_monitor.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-D_GLFW_USE_CONFIG_H",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/include",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/src",
+            "-fPIC",
+            "-Wall",
+            "-std=c99",
+            "-o",
+            "CMakeFiles/glfw.dir/linux_joystick.c.o",
+            "linux_joystick.c"
+        ],
+        "directory": "/home/js/Documents/Grass-Renderer/includes/glfw/src",
+        "file": "linux_joystick.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-D_GLFW_USE_CONFIG_H",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/include",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/src",
+            "-fPIC",
+            "-Wall",
+            "-std=c99",
+            "-o",
+            "CMakeFiles/glfw.dir/posix_time.c.o",
+            "posix_time.c"
+        ],
+        "directory": "/home/js/Documents/Grass-Renderer/includes/glfw/src",
+        "file": "posix_time.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-D_GLFW_USE_CONFIG_H",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/include",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/src",
+            "-fPIC",
+            "-Wall",
+            "-std=c99",
+            "-Wdeclaration-after-statement",
+            "-o",
+            "CMakeFiles/glfw.dir/input.c.o",
+            "input.c"
+        ],
+        "directory": "/home/js/Documents/Grass-Renderer/includes/glfw/src",
+        "file": "input.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-D_GLFW_USE_CONFIG_H",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/include",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/src",
+            "-fPIC",
+            "-Wall",
+            "-std=c99",
+            "-Wdeclaration-after-statement",
+            "-o",
+            "CMakeFiles/glfw.dir/init.c.o",
+            "init.c"
+        ],
+        "directory": "/home/js/Documents/Grass-Renderer/includes/glfw/src",
+        "file": "init.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-D_GLFW_USE_CONFIG_H",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/include",
+            "-I/home/js/Documents/Grass-Renderer/includes/glfw/src",
+            "-fPIC",
+            "-Wall",
+            "-std=c99",
+            "-Wdeclaration-after-statement",
+            "-o",
+            "CMakeFiles/glfw.dir/context.c.o",
+            "context.c"
+        ],
+        "directory": "/home/js/Documents/Grass-Renderer/includes/glfw/src",
+        "file": "context.c"
     }
 ]

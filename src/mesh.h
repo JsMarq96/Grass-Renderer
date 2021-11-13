@@ -32,13 +32,14 @@ struct sMesh {
     unsigned int    raw_vertex_size = 0;
     unsigned int    uv_count = 0;
 
-    unsigned int   *faces_index = nullptr;
+    unsigned int   *faces_index;
     unsigned int    indices_cout = 0;
+
+    void load_mesh(const char* mesh_dir);
+    void load_cube();
+    void destroy();
 };
 
-void
-load_mesh(sMesh *result,
-          const char* mesh_dir);
 
 void
 load_cube_mesh(sMesh *result);
