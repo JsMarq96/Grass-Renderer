@@ -10,6 +10,7 @@
 #include "shader.h"
 #include "mesh.h"
 #include "math.h"
+#include "material.h"
 #include "raw_shaders.h"
 
 struct sMeshRenderer {
@@ -23,7 +24,7 @@ struct sMeshRenderer {
     sShader         shader;
 
     void render_init(const sMesh    *raw_mesh,
-                 const bool      is_static);
+                     const bool      is_static);
 
     void render_init_cube(const bool is_static);
 
@@ -37,22 +38,27 @@ struct sMeshRenderer {
 
 
 struct sInstancedMeshRenderer {
-    unsigned int    VAO;
-    unsigned int    mesh_VBO;
-    unsigned int    mesh_EBO;
+    unsigned int    VAO             = -1;
+    unsigned int    mesh_VBO        = -1;
+    unsigned int    mesh_EBO        = -1;
+    unsigned int    instanced_VBO   = -1;
 
-    unsigned int    instanced_VBO;
+    sMat44  *instanced_models = NULL;
+    unsigned int instance_size = 0;
 
     const sMesh     *origin_mesh;
     int             indices_count = 0;
 
-    void init(const sMesh *raw_mesh, const bool is_static);
+    void init(const sMesh &raw_mesh,
+              const bool is_static);
+
+    void set_instances(sMat44 *models_list, const unsigned int count);
+
     void destroy();
 
-    void render_meshes(const sMat44    *model_mats,
-                       const int        model_count,
+    void render_meshes(const sMaterial &material,
                        const sCamera   &camera,
-                       const bool       show_wireframe);
+                       const bool       show_wireframe) const;
 };
 
 #endif //MESH_RENDERER_H
